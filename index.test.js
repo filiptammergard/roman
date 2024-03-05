@@ -1,3 +1,5 @@
+// @ts-check
+
 import { it, expect } from "vitest"
 import { fromRoman, toRoman } from "./index"
 
@@ -8004,9 +8006,9 @@ it("converts from arabic to roman", () => {
 })
 
 it("throws on invalid arabic input", () => {
-	expect(() => toRoman("123")).toThrowError(
-		"input needs to be of type number, got string",
-	)
+	expect(() =>
+		toRoman(/** @type {number} */ (/** @type {unknown} */ ("123"))),
+	).toThrowError("input needs to be of type number, got string")
 	expect(() => toRoman(0)).toThrowError(
 		"0 cannot be represented in roman numerals",
 	)

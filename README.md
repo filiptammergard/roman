@@ -11,11 +11,11 @@ pnpm add roman
 ## Usage
 
 ```ts
-import { fromRoman, toRoman } from "@tammergard/roman";
+import { fromRoman, toRoman } from "@tammergard/roman"
 
-fromRoman("CXXIII"); // 123
+fromRoman("CXXIII") // 123
 
-toRoman(123); // "CXXIII"
+toRoman(123) // "CXXIII"
 ```
 
 ## License

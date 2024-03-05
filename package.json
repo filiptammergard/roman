@@ -1,0 +1,27 @@
+{
+  "name": "@tammergard/roman",
+  "version": "1.0.0",
+  "description": "Convert to and from roman numerals",
+  "scripts": {
+    "test": "vitest"
+  },
+  "devDependencies": {
+    "vitest": "^1.2.2"
+  },
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/filiptammergard/roman.git"
+  },
+  "keywords": [
+    "roman",
+    "numerals",
+    "roman numerals"
+  ],
+  "author": "Filip Tammergård",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/filiptammergard/roman/issues"
+  },
+  "homepage": "https://github.com/filiptammergard/roman#readme"
+}

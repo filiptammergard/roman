@@ -1,3 +1,23 @@
-# romabic
+# roman
 
-Convert roman numerals to arabic numbers and vice versa.
+Convert to and from roman numerals.
+
+## Installation
+
+```
+pnpm add roman
+```
+
+## Usage
+
+```ts
+import { fromRoman, toRoman } from "@tammergard/roman";
+
+fromRoman("CXXIII"); // 123
+
+toRoman(123); // "CXXIII"
+```
+
+## License
+
+MIT

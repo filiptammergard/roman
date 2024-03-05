@@ -16,6 +16,9 @@
 		"vitest": "1.2.2"
 	},
 	"main": "index.js",
+	"files": [
+		"index.js"
+	],
 	"repository": {
 		"type": "git",
 		"url": "git+https://github.com/filiptammergard/roman.git"
@@ -30,5 +33,9 @@
 	"bugs": {
 		"url": "https://github.com/filiptammergard/roman/issues"
 	},
-	"homepage": "https://github.com/filiptammergard/roman#readme"
+	"homepage": "https://github.com/filiptammergard/roman#readme",
+	"publishConfig": {
+		"access": "public",
+		"provenance": true
+	}
 }

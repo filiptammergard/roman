@@ -1,3 +1,5 @@
+// @ts-check
+
 const romanRegExp =
 	/^(M{1,4}(CM|CD|D?C{0,3})(XC|XL|L?X{0,3})(IX|IV|V?I{0,3})|M{0,4}(CM|C?D|D?C{1,3})(XC|XL|L?X{0,3})(IX|IV|V?I{0,3})|M{0,4}(CM|CD|D?C{0,3})(XC|X?L|L?X{1,3})(IX|IV|V?I{0,3})|M{0,4}(CM|CD|D?C{0,3})(XC|XL|L?X{0,3})(IX|I?V|V?I{1,3}))$/
 
@@ -64,10 +66,14 @@ export function fromRoman(roman) {
 	if (!romanRegExp.test(roman)) {
 		throw new Error("input is not a valid roman numeral")
 	}
-	const splitArabic = roman.split("").map((r) => romanArabicMap.get(r))
+	const split = roman.split("").map((r) => romanArabicMap.get(r))
 	let arabic = 0
-	splitArabic.forEach((value, index, array) => {
-		if (array[index + 1] > value) {
+	split.forEach((value, index, array) => {
+		if (!value) {
+			return
+		}
+		const nextValue = array[index + 1]
+		if (nextValue && nextValue > value) {
 			arabic -= value
 		} else {
 			arabic += value

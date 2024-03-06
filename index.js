@@ -1,6 +1,6 @@
 // @ts-check
 
-const pattern =
+export const pattern =
 	/^(M{1,4}(CM|CD|D?C{0,3})(XC|XL|L?X{0,3})(IX|IV|V?I{0,3})|M{0,4}(CM|C?D|D?C{1,3})(XC|XL|L?X{0,3})(IX|IV|V?I{0,3})|M{0,4}(CM|CD|D?C{0,3})(XC|X?L|L?X{1,3})(IX|IV|V?I{0,3})|M{0,4}(CM|CD|D?C{0,3})(XC|XL|L?X{0,3})(IX|I?V|V?I{1,3}))$/
 
 const romanArabicMap = new Map([
@@ -18,8 +18,6 @@ const romanArabicMap = new Map([
 	["IV", 4],
 	["I", 1],
 ])
-
-const arabicRomanMap = new Map(Array.from(romanArabicMap, (a) => a.reverse()))
 
 /**
  * @param {number} arabic An arabic number.
@@ -45,10 +43,11 @@ export function toRoman(arabic) {
 	}
 	let roman = ""
 	let acc = arabic
-	const numerals = [...romanArabicMap.values()]
-	numerals.forEach((value) => {
+	const values = [...romanArabicMap.values()]
+	const keys = [...romanArabicMap.keys()]
+	values.forEach((value, index) => {
 		while (acc >= value) {
-			roman += arabicRomanMap.get(value)
+			roman += keys[index]
 			acc -= value
 		}
 	})

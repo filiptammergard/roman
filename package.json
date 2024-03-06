@@ -1,6 +1,7 @@
 {
 	"name": "@tammergard/roman",
 	"version": "1.0.0",
+	"type": "module",
 	"description": "Convert to and from roman numerals",
 	"scripts": {
 		"format": "prettier --write .",
@@ -17,7 +18,8 @@
 	},
 	"main": "index.js",
 	"files": [
-		"index.js"
+		"index.js",
+		"index.d.ts"
 	],
 	"repository": {
 		"type": "git",

@@ -1,6 +1,6 @@
 // @ts-check
 
-const romanRegExp =
+const pattern =
 	/^(M{1,4}(CM|CD|D?C{0,3})(XC|XL|L?X{0,3})(IX|IV|V?I{0,3})|M{0,4}(CM|C?D|D?C{1,3})(XC|XL|L?X{0,3})(IX|IV|V?I{0,3})|M{0,4}(CM|CD|D?C{0,3})(XC|X?L|L?X{1,3})(IX|IV|V?I{0,3})|M{0,4}(CM|CD|D?C{0,3})(XC|XL|L?X{0,3})(IX|I?V|V?I{1,3}))$/
 
 const romanArabicMap = new Map([
@@ -63,7 +63,7 @@ export function fromRoman(roman) {
 	if (typeof roman !== "string") {
 		throw new Error(`input needs to be of type string, got ${typeof roman}`)
 	}
-	if (!romanRegExp.test(roman)) {
+	if (!pattern.test(roman)) {
 		throw new Error("input is not a valid roman numeral")
 	}
 	const split = roman.split("").map((r) => romanArabicMap.get(r))

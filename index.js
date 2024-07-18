@@ -44,7 +44,7 @@ export function toRoman(arabic) {
 			roman += keys[index]
 			acc -= value
 		}
-		array.slice(index + 1).forEach((subractor, i, a) => {
+		array.slice(index + 1).forEach((subractor, i) => {
 			if (subractor.toString().startsWith("1") && acc >= value - subractor) {
 				roman += keys[index + 1 + i] + keys[index]
 				acc -= value - subractor

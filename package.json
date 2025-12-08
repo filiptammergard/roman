@@ -11,7 +11,7 @@
 		"test": "vitest"
 	},
 	"devDependencies": {
-		"@changesets/cli": "2.29.7",
+		"@changesets/cli": "2.29.8",
 		"@tammergard/prettier-config": "2.1.0",
 		"prettier": "3.6.2",
 		"vitest": "4.0.13"

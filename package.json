@@ -14,7 +14,7 @@
 		"@changesets/cli": "2.29.8",
 		"@tammergard/prettier-config": "2.1.0",
 		"prettier": "3.7.4",
-		"vitest": "4.0.15"
+		"vitest": "4.0.16"
 	},
 	"main": "index.js",
 	"files": [

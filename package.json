@@ -4,22 +4,36 @@
 	"type": "module",
 	"description": "Convert to and from roman numerals",
 	"scripts": {
+		"build": "tsc -p tsconfig.build.json",
 		"format": "prettier --write .",
 		"format-check": "prettier --check .",
+		"prepublishOnly": "pnpm build",
 		"release": "pnpm changeset publish",
-		"review": "pnpm install --frozen-lockfile && pnpm format-check && pnpm test",
-		"test": "vitest"
+		"review": "pnpm install --frozen-lockfile && pnpm format-check && pnpm typecheck && pnpm test",
+		"test": "vitest",
+		"typecheck": "tsc"
 	},
 	"devDependencies": {
-		"@changesets/cli": "2.31.0",
-		"@tammergard/prettier-config": "3.0.0",
-		"prettier": "3.8.3",
-		"vitest": "4.1.6"
+		"@changesets/cli": "^2.31.0",
+		"@tammergard/prettier-config": "^3.0.0",
+		"@tammergard/tsconfig": "^3.0.0",
+		"prettier": "^3.8.3",
+		"typescript": "^6.0.3",
+		"vitest": "^4.1.7"
 	},
-	"main": "index.js",
+	"engines": {
+		"node": ">=24"
+	},
+	"main": "dist/index.js",
+	"types": "dist/index.d.ts",
+	"exports": {
+		".": {
+			"types": "./dist/index.d.ts",
+			"default": "./dist/index.js"
+		}
+	},
 	"files": [
-		"index.js",
-		"index.d.ts"
+		"dist"
 	],
 	"repository": {
 		"type": "git",

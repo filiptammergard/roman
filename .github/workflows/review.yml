@@ -2,6 +2,9 @@ name: Review
 
 on: push
 
+permissions:
+  contents: read
+
 jobs:
   review:
     name: Review
@@ -16,7 +19,7 @@ jobs:
       - name: Setup Node
         uses: actions/setup-node@v6
         with:
-          node-version: 20
+          node-version: 24
           cache: pnpm
 
       - name: Review

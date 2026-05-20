@@ -1,5 +1,17 @@
 # @tammergard/roman
 
+## 1.1.0
+
+### Minor Changes
+
+- 9f95eb7: Tighten roman numeral validation and migrate source to TypeScript.
+  - `fromRoman` now rejects `MMMM` and the empty string (previously accepted as
+    `4000` and treated as valid input respectively).
+  - Source migrated to TypeScript; published output now lives under `dist/`.
+    Consumers using the package via `import` continue to work unchanged thanks
+    to the `exports` field.
+  - `engines.node` is now `>=24`.
+
 ## 1.0.2
 
 ### Patch Changes

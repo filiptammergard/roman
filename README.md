@@ -1,11 +1,18 @@
-# roman
+# @tammergard/roman
 
 Convert to and from roman numerals.
 
 ## Installation
 
-```
+```bash
+# npm
+npm install @tammergard/roman
+
+# pnpm
 pnpm add @tammergard/roman
+
+# bun
+bun add @tammergard/roman
 ```
 
 ## Usage

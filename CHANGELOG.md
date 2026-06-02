@@ -1,5 +1,11 @@
 # @tammergard/roman
 
+## 1.1.1
+
+### Patch Changes
+
+- 5d490bf: Use `devEngines` instead of `engines` for the Node version requirement, so it applies to development only and no longer constrains consumers of the package.
+
 ## 1.1.0
 
 ### Minor Changes

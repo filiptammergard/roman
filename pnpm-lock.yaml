@@ -16,7 +16,7 @@ importers:
         version: 6.1.1(eslint@10.6.0)
       '@tammergard/prettier-config':
         specifier: ^3.0.2
-        version: 3.0.2(prettier@3.9.3)
+        version: 3.0.2(prettier@3.9.4)
       '@tammergard/tsconfig':
         specifier: ^3.0.2
         version: 3.0.2(typescript@6.0.3)
@@ -25,7 +25,7 @@ importers:
         version: 10.6.0
       prettier:
         specifier: ^3.8.3
-        version: 3.9.3
+        version: 3.9.4
       tsdown:
         specifier: ^0.22.0
         version: 0.22.3(typescript@6.0.3)
@@ -1046,6 +1046,10 @@ packages:
     resolution: {integrity: sha512-QP88BAKvMam/3NxH6vj2o21R6MjxZUAd6nlwAS/pnGvN9IVLocLHxGYIzFhg6fUQ+5th6P4dv4eW9jX3DSIj7A==}
     engines: {node: '>=12'}
 
+  picomatch@4.0.5:
+    resolution: {integrity: sha512-RvwwcruNjI1ncT5xRakeyS9Lf8lcItv34KD+aif+VH9kduAyfYBipGh12274xtenIPZ119/R9BdTBa8gAwSh0A==}
+    engines: {node: '>=12'}
+
   pify@4.0.1:
     resolution: {integrity: sha512-uB80kBFb/tfd68bVleG9T5GGsGPjJrLAUpR5PZIrhBnIaRTQRjqdJSsIKkOP6OAIFbj7GOrcudc5pNjZ+geV2g==}
     engines: {node: '>=6'}
@@ -1063,8 +1067,8 @@ packages:
     engines: {node: '>=10.13.0'}
     hasBin: true
 
-  prettier@3.9.3:
-    resolution: {integrity: sha512-HWmu+K+zvHNpaMfSnYeqdqrDbR16cuIXaPx8WoHaviQkDJh1/0BNtOZmHVQI5jc3wXv0H1yXc9wjvFdXh+n3hQ==}
+  prettier@3.9.4:
+    resolution: {integrity: sha512-yWG/o/4oJfo036EKAfK6ACAoDOfHeRHx4tuxkfBZiauURiaSmYwlpOr5LQqKtIkRD2z1PLteme2WoxEnj4tHTg==}
     engines: {node: '>=14'}
     hasBin: true
 
@@ -1801,9 +1805,9 @@ snapshots:
       '@eslint/js': 10.0.1(eslint@10.6.0)
       eslint: 10.6.0
 
-  '@tammergard/prettier-config@3.0.2(prettier@3.9.3)':
+  '@tammergard/prettier-config@3.0.2(prettier@3.9.4)':
     dependencies:
-      prettier: 3.9.3
+      prettier: 3.9.4
 
   '@tammergard/tsconfig@3.0.2(typescript@6.0.3)':
     dependencies:
@@ -2327,6 +2331,8 @@ snapshots:
 
   picomatch@4.0.4: {}
 
+  picomatch@4.0.5: {}
+
   pify@4.0.1: {}
 
   postcss@8.5.16:
@@ -2339,7 +2345,7 @@ snapshots:
 
   prettier@2.8.8: {}
 
-  prettier@3.9.3: {}
+  prettier@3.9.4: {}
 
   punycode@2.3.1: {}
 
@@ -2531,7 +2537,7 @@ snapshots:
   vite@8.0.14(@types/node@24.12.4):
     dependencies:
       lightningcss: 1.32.0
-      picomatch: 4.0.4
+      picomatch: 4.0.5
       postcss: 8.5.16
       rolldown: 1.0.2
       tinyglobby: 0.2.17
